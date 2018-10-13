@@ -33,7 +33,6 @@ def drawContours(frame, arr, color=(25, 105, 255)):
 
 
 
-
 def getFields(FieldObjects):
     sortied = sorted(FieldObjects, key=lambda cnt: cv2.contourArea(cnt))
     box = getBoundingRect(sortied[len(sortied) - 1])
