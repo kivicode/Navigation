@@ -27,7 +27,7 @@ def nothing(x):
 
 def getFields(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    gray = cv2.bilateralFilter(gray, 5, 17, 17)[0:300, :] #11 17 17
+    gray = cv2.bilateralFilter(gray, 5, 17, 17)[:300, :] #11 17 17
     edged = cv2.Canny(gray, 20, 150) #30 200
     img2, cnts, _ = cv2.findContours(edged.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:10]
@@ -36,18 +36,15 @@ def getFields(image):
     i = 0
     for cnt in cnts:
         area = cv2.contourArea(cnt)
-        if area <= 4500:
+        if area <= 4500 and area >= 1000:
             rect = getBoundingRect(cnt)
             cropped = image[rect[0][1]:rect[1][1], rect[0][0]:rect[1][0]]
-            color = getObjectColor(cropped)
+            color = getObjectColor(cropped) #bgr
+            print(color)
             label = closest_colour(color)
-            r = Rect(rect[0], rect[1], label=label)
-
+            r = Rect(rect[0], rect[1], color=color, label=label)
             rectangles.append(r)
-            # image = r.draw(image, color=color)
-            # i += 1
-            # cv2.imshow(str(len(rectangles)), cropped)
-    print(len(rectangles))
+    flds = []
     for r in rectangles:
         check = True
         for a in rectangles:
@@ -57,24 +54,31 @@ def getFields(image):
                     check = False
         if check:
             image = r.draw(image)
-            i += 1
-
-
-    print(i)
+            flds.append(r)
     return image, cnts
 
 def closest_colour(requested_colour):
-    min_colours = {}
-    for key, name in css3_hex_to_names.items():
-        r_c, g_c, b_c = hex_to_rgb(key)
-        rd = (r_c - requested_colour[0]) ** 2
-        gd = (g_c - requested_colour[1]) ** 2
-        bd = (b_c - requested_colour[2]) ** 2
-        min_colours[(rd + gd + bd)] = name
-    return min_colours[min(min_colours.keys())]
+    # min_colours = {}
+    # for key, name in css3_hex_to_names.items():
+    #     r_c, g_c, b_c = hex_to_rgb(key)
+    #     rd = (r_c - requested_colour[0]) ** 2
+    #     gd = (g_c - requested_colour[1]) ** 2
+    #     bd = (b_c - requested_colour[2]) ** 2
+    #     min_colours[(rd + gd + bd)] = name
+    # return min_colours[min(min_colours.keys())]
+    best = int(sorted(requested_colour)[2])
+    b = int(requested_colour[0])
+    g = int(requested_colour[1])
+    r = int(requested_colour[2])
+    if best == r:
+        return "red"
+    elif best == g:
+        return "green"
+    elif best == b:
+        return "blue"
 
 def getObjectColor(img):
-    return (np.average(img, axis=0)[0][2], np.average(img, axis=0)[0][1], np.average(img, axis=0)[0][0])
+    return (np.average(img, axis=0)[0][0], np.average(img, axis=0)[0][1], np.average(img, axis=0)[0][2])
 
 
 def drawContours(frame, arr, color=(25, 105, 255)):
@@ -190,14 +194,15 @@ def average_color(img):
 
 
 class Rect:
-    def __init__(self, f, t, label=""):
+    def __init__(self, f, t, label="", color=(0, 0, 0)):
         self.leftUp = f
         self.rightDown = t
         self.label = label
+        self.color = color
 
-    def draw(self, image, color=(0, 0, 0)):
-        cv2.rectangle(image, self.leftUp, self.rightDown, color, -1)
-        cv2.putText(image, str(self.label), self.leftUp, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1, cv2.LINE_AA)
+    def draw(self, image, color=None):
+        cv2.rectangle(image, self.leftUp, self.rightDown, self.color if color==None else color, -1)
+        cv2.putText(image, str(self.label), (self.leftUp[0]-3, self.leftUp[1]+25), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 1, cv2.LINE_AA)
         return image
 
     def getCenter(self):

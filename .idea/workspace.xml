@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038ad4db-9766-4ade-9e8d-5b1383c4e521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/table4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/table3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/table3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,14 +40,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="8289" />
-          <entry key="txt" value="65" />
+          <entry key="py" value="8930" />
+          <entry key="txt" value="123" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="65" />
-          <entry key="Python" value="8289" />
+          <entry key="PLAIN_TEXT" value="123" />
+          <entry key="Python" value="8930" />
         </counts>
       </usages-collector>
     </session>
@@ -73,12 +70,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+            <state relative-caret-position="195">
+              <caret line="204" column="135" selection-start-line="204" selection-start-column="135" selection-end-line="204" selection-end-column="135" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1539448690540" expanded="true" signature="1638:1639" ph="..." />
-                <marker date="1539448690540" expanded="true" signature="5006:5011" ph="..." />
+                <marker date="1539450570857" expanded="true" signature="1537:1542" ph="..." />
+                <marker date="1539450570857" expanded="true" signature="2159:2160" ph="..." />
+                <marker date="1539450570857" expanded="true" signature="5527:5532" ph="..." />
               </folding>
             </state>
           </provider>
@@ -298,7 +296,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539447395270</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Situation makes better">
+      <created>1539448719744</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1539448719744</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fields detects, but without colors">
+      <created>1539449591682</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1539449591683</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -331,7 +343,9 @@
     <MESSAGE value="Test Version of Video-Navigation System" />
     <MESSAGE value="Update function which detects big fields" />
     <MESSAGE value="Not Working Update #TEST#" />
-    <option name="LAST_COMMIT_MESSAGE" value="Not Working Update #TEST#" />
+    <MESSAGE value="Situation makes better" />
+    <MESSAGE value="Fields detects, but without colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fields detects, but without colors" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Screenshotes/Final_screenshot_12.10.2018.png">
@@ -402,12 +416,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+        <state relative-caret-position="195">
+          <caret line="204" column="135" selection-start-line="204" selection-start-column="135" selection-end-line="204" selection-end-column="135" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1539448690540" expanded="true" signature="1638:1639" ph="..." />
-            <marker date="1539448690540" expanded="true" signature="5006:5011" ph="..." />
+            <marker date="1539450570857" expanded="true" signature="1537:1542" ph="..." />
+            <marker date="1539450570857" expanded="true" signature="2159:2160" ph="..." />
+            <marker date="1539450570857" expanded="true" signature="5527:5532" ph="..." />
           </folding>
         </state>
       </provider>
