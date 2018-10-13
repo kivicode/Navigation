@@ -6,9 +6,7 @@ debug = False
 loop = True
 
 FieldObjects = []
-fps = 1/1
-
-firstFrame = True
+fps = 0
 
 cam = cv2.VideoCapture(0)
 
@@ -21,17 +19,16 @@ while loop:
     cv2.imshow('Original', frame)
 
 
+
     frame = removePerspective(cv2.imread('images/table3.png'), frame)
 
-    frame = getFields(frame)[0]
+    frame = getContours(frame)
 
     cv2.imshow('Final', frame)
     cv2.setMouseCallback('Final', onMouse)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-    while abs(start_time-time.time()) < 1/fps and not firstFrame:
-        a=0
-    firstFrame = False
 
+    fps = int(1.0 / (time.time() - start_time))
 cam.release()
 cv2.destroyAllWindows()
