@@ -11,21 +11,14 @@ FieldObjects = []
 fps = 0
 
 cam = cv2.VideoCapture(0)
-# cam.set(cv2.CAP_PROP_FPS, 10)
 
 def setup():
-
-    try:
-        frame = cv2.imread('images/table3.png')
-        cv2.imshow('Original', frame)
-        firstSetup(frame)
-    except:
-        setup()
+    frame = cv2.imread('images/table3.png')
+    cv2.imshow('Original', frame)
+    firstSetup(frame)
     if m == []:
         setup()
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        return
 
 # setup()
 
@@ -35,15 +28,8 @@ while loop:
     # try:
 
     frame = cv2.imread('images/table.png')
-
-        # _, frame = cam.read()
-        # print(m)
     firstSetup(cv2.imread('images/table3.png'))
 
-    cv2.imshow('Original', frame)
-
-
-        # try:
     frame = removePerspective(frame)
 
 

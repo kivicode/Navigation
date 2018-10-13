@@ -27,25 +27,26 @@ def nothing(x):
 
 def getFields(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    gray = cv2.bilateralFilter(gray, 11, 17, 17)[0:300, :]
-    edged = cv2.Canny(gray, 20, 200) #30 200
+    gray = cv2.bilateralFilter(gray, 5, 17, 17)[0:300, :] #11 17 17
+    edged = cv2.Canny(gray, 20, 150) #30 200
     img2, cnts, _ = cv2.findContours(edged.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:10]
     rectangles = []
     cv2.imshow("Gray", img2)
+    i = 0
     for cnt in cnts:
-        rect = getBoundingRect(cnt)
-        cropped = image[rect[0][1]:rect[1][1], rect[0][0]:rect[1][0]]
-        if cv2.contourArea(cnt) < 4000:
+        area = cv2.contourArea(cnt)
+        if area <= 4700:
+            rect = getBoundingRect(cnt)
+            cropped = image[rect[0][1]:rect[1][1], rect[0][0]:rect[1][0]]
             color = getObjectColor(cropped)
-        else:
-            color = (0, 0, 0)
-        label = closest_colour(color)
-        r = Rect(rect[0], rect[1], label=label)
-        rectangles.append(r)
-        image = r.draw(image, color=color)
-        # cv2.imshow(str(len(rectangles)), cropped)
-
+            label = closest_colour(color)
+            r = Rect(rect[0], rect[1], label=label)
+            rectangles.append(r)
+            image = r.draw(image, color=color)
+            i += 1
+            # cv2.imshow(str(len(rectangles)), cropped)
+    print(i)
     return image, cnts
 
 def closest_colour(requested_colour):
