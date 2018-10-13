@@ -20,11 +20,11 @@ position = []
 def nothing(x):
     pass
 
-def findContours(frame, threshold):
-    ret, thresh = cv2.threshold(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), threshold, 10, 0)
-    frame2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    return [frame2, contours]
-
+def getContours(im):
+    imgray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+    ret, thresh = cv2.threshold(imgray, 127, 255, 0)
+    im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    return im
 
 def drawContours(frame, arr, color=(25, 105, 255)):
     for cnt in arr:
@@ -32,23 +32,6 @@ def drawContours(frame, arr, color=(25, 105, 255)):
     return frame
 
 
-def colorMask(frame, set):
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-
-    color = np.uint8([[set[0]]])
-    color = cv2.cvtColor(color, cv2.COLOR_BGR2HSV)[0][0]
-
-    fr = set[1]
-
-    lower = np.array([color[0] - fr, color[1] - fr, color[2] - fr])
-    upper = np.array([color[0] + fr, color[1] + fr, color[2] + fr])
-
-    mask = cv2.blur(cv2.inRange(hsv, lower, upper), (5, 5))
-    res = cv2.bitwise_and(frame, frame, mask=mask)
-
-    cont = findContours(res, set[2])
-
-    return [frame, cont]
 
 
 def getFields(FieldObjects):

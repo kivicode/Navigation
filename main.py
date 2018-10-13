@@ -22,28 +22,7 @@ while loop:
 
     frame = removePerspective(cv2.imread('images/table3.png'), frame)
 
-    FieldObjects = [
-        colorMask(frame, green, )[1][1],
-        colorMask(frame, blue)[1][1]
-    ]
-
-    for cnt in getFields(FieldObjects[0]):
-        cv2.drawContours(frame, [cnt], 0, (0, 255, 0), -1, cv2.LINE_AA)
-
-    for cnt in getFields(FieldObjects[1]):
-        cv2.drawContours(frame, [cnt], 0, (255, 0, 0), -1, cv2.LINE_AA)
-
-    FieldObjects = [
-        colorMask(frame, green)[1][1],
-        colorMask(frame, blue)[1][1]
-    ]
-
-    for cnt in getRoves(FieldObjects[0]):
-        cv2.drawContours(frame, [getBoundingRect(cnt)], 0, (0, 255, 255), -1, cv2.LINE_AA)
-
-    for cnt in getRoves(FieldObjects[1]):
-        cv2.drawContours(frame, [getBoundingRect(cnt)], 0, (255, 0, 255), -1, cv2.LINE_AA)
-
+    frame = getContours(frame)
 
     cv2.imshow('Final', frame)
     cv2.setMouseCallback('Final', onMouse)
