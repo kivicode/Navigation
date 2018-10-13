@@ -36,16 +36,30 @@ def getFields(image):
     i = 0
     for cnt in cnts:
         area = cv2.contourArea(cnt)
-        if area <= 4700:
+        if area <= 4500:
             rect = getBoundingRect(cnt)
             cropped = image[rect[0][1]:rect[1][1], rect[0][0]:rect[1][0]]
             color = getObjectColor(cropped)
             label = closest_colour(color)
             r = Rect(rect[0], rect[1], label=label)
+
             rectangles.append(r)
-            image = r.draw(image, color=color)
-            i += 1
+            # image = r.draw(image, color=color)
+            # i += 1
             # cv2.imshow(str(len(rectangles)), cropped)
+    print(len(rectangles))
+    for r in rectangles:
+        check = True
+        for a in rectangles:
+            if r != a and check:
+                if not r.isInside(a):
+                    rectangles.remove(r)
+                    check = False
+        if check:
+            image = r.draw(image)
+            i += 1
+
+
     print(i)
     return image, cnts
 
@@ -198,3 +212,6 @@ class Rect:
         w = abs(self.leftUp[0] - self.rightDown[0])
         h = abs(self.leftUp[1] - self.rightDown[1])
         return 2*(w+h)
+
+    def isInside(self, a):
+        return not (self.leftUp[0] < a.leftUp[0] and self.leftUp[1] < a.leftUp[1] and self.rightDown[0] > a.rightDown[0] and self.rightDown[1] > a.rightDown[1])
