@@ -17,28 +17,51 @@ red = []
 
 position = []
 
+
 def nothing(x):
     pass
 
-def getContours(im):
-    imgray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-    ret, thresh = cv2.threshold(imgray, 127, 255, 0)
-    im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    return im
+
+def getFields(image):
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    gray = cv2.bilateralFilter(gray, 11, 17, 17)
+    edged = cv2.Canny(gray, 20, 200)
+    _, cnts, _ = cv2.findContours(edged.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:10]
+    for cnt in cnts:  # >= 90
+        rect = getBoundingRect(cnt)
+        cropped = image[rect[0][1]:rect[1][1], rect[0][0]:rect[1][0]]
+        color = getObjectColor(cropped)
+        cv2.rectangle(image, rect[0], rect[1], color, -1)
+    return image, cnts
+
+
+def getObjectColor(img):
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    height, width, _ = img.shape
+
+    r_total = 0
+    g_total = 0
+    b_total = 0
+
+    count = 0
+    for x in range(0, width):
+        for y in range(0, height):
+            if gray[y, x] >= 90:
+                r, g, b = img[y, x]
+                r_total += r
+                g_total += g
+                b_total += b
+                count += 1
+    if count == 0:
+        return (0, 0, 0)
+    return (r_total / count, g_total / count, b_total / count)
+
 
 def drawContours(frame, arr, color=(25, 105, 255)):
     for cnt in arr:
-        cv2.drawContours(frame, [cnt], -1, color, -1)
+        cv2.drawContours(frame, [cnt], -1, color, 3)
     return frame
-
-
-
-
-def getFields(FieldObjects):
-    sortied = sorted(FieldObjects, key=lambda cnt: cv2.contourArea(cnt))
-    box = getBoundingRect(sortied[len(sortied) - 1])
-    box1 = getBoundingRect(sortied[len(sortied) - 3])
-    return [box, box1]
 
 
 def getRoves(FieldObjects):
@@ -52,7 +75,6 @@ def getRoves(FieldObjects):
 
 
 def removePerspective(img, second):
-
     m = getMarkers(img)["markers"]
     src = np.float32([m[1],
                       m[2],
@@ -70,11 +92,16 @@ def removePerspective(img, second):
     return warped
 
 
-def getBoundingRect(cnt):
+def getBoundingRotatedRect(cnt):
     rect = cv2.minAreaRect(cnt)
     box = cv2.boxPoints(rect)
     box = np.int0(box)
     return box
+
+
+def getBoundingRect(cnt, margin=[(0, 0), (0, 0)]):
+    x, y, w, h = cv2.boundingRect(cnt)
+    return (x + margin[0][0], y + margin[0][1]), (x + w + margin[1][0], y + h + margin[1][1])
 
 
 def getRealPos(x, y):
@@ -128,15 +155,16 @@ def average_color(img):
     count = 0
     for x in range(0, width):
         for y in range(0, height):
-            r, g, b = img[y,x]
+            r, g, b = img[y, x]
             r_total += r
             g_total += g
             b_total += b
             count += 1
     if count == 0:
-        return (0,0,0)
-    return (r_total/count, g_total/count, b_total/count)
+        return (0, 0, 0)
+    return (r_total / count, g_total / count, b_total / count)
+
 
 def test_calibrate(img, x, y):
-    edges = cv2.Canny(img,x,y)
+    edges = cv2.Canny(img, x, y)
     return edges
