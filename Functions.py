@@ -1,5 +1,5 @@
 from typing import List, Any
-
+from webcolors import *
 import cv2
 import cv2.aruco as aruco
 import math
@@ -17,6 +17,9 @@ red = []
 
 position = []
 
+m = []
+
+fields = []
 
 def nothing(x):
     pass
@@ -24,38 +27,39 @@ def nothing(x):
 
 def getFields(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    gray = cv2.bilateralFilter(gray, 11, 17, 17)
-    edged = cv2.Canny(gray, 20, 200)
-    _, cnts, _ = cv2.findContours(edged.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    gray = cv2.bilateralFilter(gray, 11, 17, 17)[0:300, :]
+    edged = cv2.Canny(gray, 20, 200) #30 200
+    img2, cnts, _ = cv2.findContours(edged.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:10]
-    for cnt in cnts:  # >= 90
+    rectangles = []
+    cv2.imshow("Gray", img2)
+    for cnt in cnts:
         rect = getBoundingRect(cnt)
         cropped = image[rect[0][1]:rect[1][1], rect[0][0]:rect[1][0]]
-        color = getObjectColor(cropped)
-        cv2.rectangle(image, rect[0], rect[1], color, -1)
+        if cv2.contourArea(cnt) < 4000:
+            color = getObjectColor(cropped)
+        else:
+            color = (0, 0, 0)
+        label = closest_colour(color)
+        r = Rect(rect[0], rect[1], label=label)
+        rectangles.append(r)
+        image = r.draw(image, color=color)
+        # cv2.imshow(str(len(rectangles)), cropped)
+
     return image, cnts
 
+def closest_colour(requested_colour):
+    min_colours = {}
+    for key, name in css3_hex_to_names.items():
+        r_c, g_c, b_c = hex_to_rgb(key)
+        rd = (r_c - requested_colour[0]) ** 2
+        gd = (g_c - requested_colour[1]) ** 2
+        bd = (b_c - requested_colour[2]) ** 2
+        min_colours[(rd + gd + bd)] = name
+    return min_colours[min(min_colours.keys())]
 
 def getObjectColor(img):
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    height, width, _ = img.shape
-
-    r_total = 0
-    g_total = 0
-    b_total = 0
-
-    count = 0
-    for x in range(0, width):
-        for y in range(0, height):
-            if gray[y, x] >= 90:
-                r, g, b = img[y, x]
-                r_total += r
-                g_total += g
-                b_total += b
-                count += 1
-    if count == 0:
-        return (0, 0, 0)
-    return (r_total / count, g_total / count, b_total / count)
+    return (np.average(img, axis=0)[0][2], np.average(img, axis=0)[0][1], np.average(img, axis=0)[0][0])
 
 
 def drawContours(frame, arr, color=(25, 105, 255)):
@@ -73,9 +77,12 @@ def getRoves(FieldObjects):
             out.append(cnt)
     return out
 
-
-def removePerspective(img, second):
+def firstSetup(img):
+    global m
     m = getMarkers(img)["markers"]
+
+def removePerspective(second):
+    global m
     src = np.float32([m[1],
                       m[2],
                       m[3],
@@ -99,7 +106,9 @@ def getBoundingRotatedRect(cnt):
     return box
 
 
-def getBoundingRect(cnt, margin=[(0, 0), (0, 0)]):
+def getBoundingRect(cnt, margin=None):
+    if margin is None:
+        margin = [(0, 0), (0, 0)]
     x, y, w, h = cv2.boundingRect(cnt)
     return (x + margin[0][0], y + margin[0][1]), (x + w + margin[1][0], y + h + margin[1][1])
 
@@ -131,16 +140,16 @@ def getMarkers(gray):
                                                           parameters=parameters)
     centers = []
     i = 0
-
     for corner in corners:
         for cur in corner:
             center = [int((cur[0][0] + cur[2][0]) / 2), int((cur[0][1] + cur[2][1]) / 2)]
             centers.append(center)
             # cv2.circle(gray, (center[0], center[1]), 2, (0, 0, 255), -1)
-            # cv2.rectangle(gray, (cur[0][0], cur[0][1]), (cur[2][0], cur[2][1]), (0, 255, 0), 3)
+            cv2.rectangle(gray, (cur[0][0], cur[0][1]), (cur[2][0], cur[2][1]), (0, 255, 0), 3)
             font = cv2.FONT_HERSHEY_SIMPLEX
             cv2.putText(gray, str(ids[i][0]), (center[0], center[1]), font, 1, (0, 0, 255), 1, cv2.LINE_AA)
             markers[ids[i][0]] = (center[0], center[1])
+            cv2.imshow("G", gray)
             i += 1
     return {"frame": gray, "centers": centers, "markers": markers}
 
@@ -162,9 +171,29 @@ def average_color(img):
             count += 1
     if count == 0:
         return (0, 0, 0)
-    return (r_total / count, g_total / count, b_total / count)
+    return r_total / count, g_total / count, b_total / count
 
 
-def test_calibrate(img, x, y):
-    edges = cv2.Canny(img, x, y)
-    return edges
+class Rect:
+    def __init__(self, f, t, label=""):
+        self.leftUp = f
+        self.rightDown = t
+        self.label = label
+
+    def draw(self, image, color=(0, 0, 0)):
+        cv2.rectangle(image, self.leftUp, self.rightDown, color, -1)
+        cv2.putText(image, str(self.label), self.leftUp, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1, cv2.LINE_AA)
+        return image
+
+    def getCenter(self):
+        return int((self.leftUp[0] + self.rightDown[0]) / 2), int((self.leftUp[1] + self.rightDown[1]) / 2)
+
+    def S(self):
+        w = abs(self.leftUp[0] - self.rightDown[0])
+        h = abs(self.leftUp[1] - self.rightDown[1])
+        return w*h
+
+    def P(self):
+        w = abs(self.leftUp[0] - self.rightDown[0])
+        h = abs(self.leftUp[1] - self.rightDown[1])
+        return 2*(w+h)

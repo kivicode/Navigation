@@ -1,28 +1,24 @@
-import numpy as np
-import cv2
-import cv2.aruco as aruco
+import webcolors
 
-cap = cv2.VideoCapture(0)
+def closest_colour(requested_colour):
+    min_colours = {}
+    for key, name in webcolors.css3_hex_to_names.items():
+        r_c, g_c, b_c = webcolors.hex_to_rgb(key)
+        rd = (r_c - requested_colour[0]) ** 2
+        gd = (g_c - requested_colour[1]) ** 2
+        bd = (b_c - requested_colour[2]) ** 2
+        min_colours[(rd + gd + bd)] = name
+    return min_colours[min(min_colours.keys())]
 
-while (True):
-    # Capture frame-by-frame
-    gray = cv2.imread('images/marker.png')
-    # print(frame.shape) #480x640
-    # Our operations on the frame come here
-    aruco_dict = aruco.Dictionary_get(aruco.DICT_6X6_250)
-    parameters = aruco.DetectorParameters_create()
+def get_colour_name(requested_colour):
+    try:
+        closest_name = actual_name = webcolors.rgb_to_name(requested_colour)
+    except ValueError:
+        closest_name = closest_colour(requested_colour)
+        actual_name = None
+    return actual_name, closest_name
 
-    corners, ids, rejectedImgPoints = aruco.detectMarkers(gray, aruco_dict, parameters=parameters)
-    for corner in corners:
-        for cur in corner:
-            print(cur)
-            center = [int((cur[0][0]+cur[2][0])/2), int((cur[0][1]+cur[2][1])/2)]
-            cv2.circle(gray, (center[0], center[1]), 2, (0, 0, 255), -1)
-            cv2.rectangle(gray, (cur[0][0], cur[0][1]), (cur[2][0], cur[2][1]), (0, 255, 0), 3)
+requested_colour = (150, 50, 50)
+actual_name, closest_name = get_colour_name(requested_colour)
 
-    cv2.imshow('frame', gray)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
+print("Actual colour name:", actual_name, ", closest colour name:", closest_name)
