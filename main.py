@@ -10,38 +10,36 @@ loop = True
 FieldObjects = []
 fps = 0
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(1)
+_, frame = cam.read()
+
 
 def setup():
-    frame = cv2.imread('images/table3.png')
     cv2.imshow('Original', frame)
     firstSetup(frame)
-    if m == []:
-        setup()
 
 
-# setup()
-
-
+setup()
+firstSetup(frame)
 while loop:
     start_time = time.time()
-    # try:
 
-    frame = cv2.imread('images/table.png')
-    firstSetup(cv2.imread('images/table3.png'))
+    _, frame = cam.read()  # cv2.imread('images/table.png')
+    cv2.imshow('Original', frame)
 
-    frame = removePerspective(frame)
+    try:
+        firstSetup(frame)
+
+        frame = removePerspective(frame)
+        frame, fields = getFields(frame)
+        print(fields)
 
 
-    frame = getFields(frame)[0]
+        cv2.imshow('Final', frame)
+        cv2.setMouseCallback('Final', onMouse)
 
-    cv2.imshow('Final', frame)
-    cv2.setMouseCallback('Final', onMouse)
-        # except Exception as e:
-        #     print("Markers not found", "error:", e)
-
-    # except:
-    #     print("Cam not found")
+    except Exception as e:
+        pass  # print("Markers not found", e)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

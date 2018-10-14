@@ -4,6 +4,8 @@
     <list default="true" id="038ad4db-9766-4ade-9e8d-5b1383c4e521" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/table.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/table.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,68 +17,68 @@
     <session id="2098835789">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitattributes" value="1" />
           <entry key="jpg" value="1" />
-          <entry key="png" value="24" />
+          <entry key="png" value="25" />
           <entry key="py" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="25" />
+          <entry key="Image" value="26" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="8930" />
-          <entry key="txt" value="123" />
+          <entry key="py" value="10830" />
+          <entry key="txt" value="135" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="123" />
-          <entry key="Python" value="8930" />
+          <entry key="PLAIN_TEXT" value="135" />
+          <entry key="Python" value="10830" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="255">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
-                <marker date="1539448543977" expanded="true" signature="174:308" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="204" column="135" selection-start-line="204" selection-start-column="135" selection-end-line="204" selection-end-column="135" />
+            <state relative-caret-position="88">
+              <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1539450570857" expanded="true" signature="1537:1542" ph="..." />
-                <marker date="1539450570857" expanded="true" signature="2159:2160" ph="..." />
-                <marker date="1539450570857" expanded="true" signature="5527:5532" ph="..." />
+                <marker date="1539520877243" expanded="true" signature="846:1526" ph="..." />
+                <marker date="1539520877243" expanded="true" signature="2776:2778" ph="..." />
+                <marker date="1539520877243" expanded="true" signature="6760:6817" ph="..." />
+                <marker date="1539520877243" expanded="true" signature="6836:6887" ph="..." />
+                <marker date="1539520877243" expanded="true" signature="6898:6903" ph="..." />
               </folding>
             </state>
           </provider>
@@ -99,6 +101,8 @@
       <find>print</find>
       <find>putT</find>
       <find>font</find>
+      <find>marke</find>
+      <find>marker</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -111,12 +115,12 @@
         <option value="$PROJECT_DIR$/Tests/PerpectiveTest.py" />
         <option value="$PROJECT_DIR$/Tests/Color Tests.py" />
         <option value="$PROJECT_DIR$/Tests/ColorTests.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Functions.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="718" />
     <option name="height" value="900" />
   </component>
@@ -126,6 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,7 +152,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539449591683</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fields detects with colors">
+      <created>1539450582225</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1539450582225</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -345,7 +356,8 @@
     <MESSAGE value="Not Working Update #TEST#" />
     <MESSAGE value="Situation makes better" />
     <MESSAGE value="Fields detects, but without colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fields detects, but without colors" />
+    <MESSAGE value="Fields detects with colors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fields detects with colors" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Screenshotes/Final_screenshot_12.10.2018.png">
@@ -379,9 +391,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="e#74#88#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -397,32 +406,32 @@
     <entry file="file://$PROJECT_DIR$/images/table4.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/table.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/table3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/images/table.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state relative-caret-position="88">
+          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <marker date="1539448543977" expanded="true" signature="174:308" ph="..." />
+            <marker date="1539520877243" expanded="true" signature="846:1526" ph="..." />
+            <marker date="1539520877243" expanded="true" signature="2776:2778" ph="..." />
+            <marker date="1539520877243" expanded="true" signature="6760:6817" ph="..." />
+            <marker date="1539520877243" expanded="true" signature="6836:6887" ph="..." />
+            <marker date="1539520877243" expanded="true" signature="6898:6903" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Functions.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="204" column="135" selection-start-line="204" selection-start-column="135" selection-end-line="204" selection-end-column="135" />
+        <state relative-caret-position="255">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1539450570857" expanded="true" signature="1537:1542" ph="..." />
-            <marker date="1539450570857" expanded="true" signature="2159:2160" ph="..." />
-            <marker date="1539450570857" expanded="true" signature="5527:5532" ph="..." />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
