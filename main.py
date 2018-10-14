@@ -2,47 +2,47 @@ from Functions import *
 from Robots import Robot_Main
 import cv2
 
-cam = cv2.VideoCapture(1)
-_, frame = cam.read()
-
-main_robot = Robot_Main()
+main_robot = Robot_Main(2)
 
 
 def setup():
-    firstSetup(frame)
-    cv2.namedWindow('Final')
-    cv2.setMouseCallback('Final', onMouse)
-    # print(main_robot.checkWay([200, 70]))
+    while True:
+        try:
+            frame = getImage()
+            firstSetup(frame)
+            frame, poss = removePerspective(frame)
+            cv2.imshow('Final', frame)
+            cv2.setMouseCallback('Final', onMouse)
+            if cv2.waitKey(1) & 0xFF == ord('l'):
+                break
+        except Exception as e:
+            print(e)
+
 
 def main():
-    global frame
+    frame = getImage()
+
     cv2.imshow('Original', frame)
 
-    # firstSetup(frame)
-
-    frame = removePerspective(frame)
-    # frame, fields = getFields(frame)
-
-    marker = getMarkers(frame)["centers"]
-    # print(marker['2'])
-
-    cv2.circle(frame, (marker['2'][0], marker['2'][1]), 2, (0, 0, 255), -1)
-    print(getRealPos(marker['2'][0], marker['2'][1]))
+    frame, poss = removePerspective(frame)
 
     cv2.imshow('Final', frame)
 
+    markers = getMarkers(frame)["centers"]
+    frame, robot_pos = main_robot.getPos(frame, markers)
+    cv2.imshow('Final', frame)
 
+
+setup()
 while True:
-    setup()
     try:
-        _, frame = cam.read()  # cv2.imread('images/table.png')
-        if len(m) != 4:
-            firstSetup(frame)
+
         main()
     except Exception as e:
-        pass
+        print(e)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-cam.release()
+camA.release()
+camB.release()
 cv2.destroyAllWindows()

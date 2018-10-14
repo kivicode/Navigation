@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038ad4db-9766-4ade-9e8d-5b1383c4e521" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageProcessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Robots.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots.py" afterDir="false" />
@@ -18,12 +18,13 @@
     <session id="2098835789">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -31,26 +32,26 @@
           <entry key="gitattributes" value="1" />
           <entry key="jpg" value="1" />
           <entry key="png" value="26" />
-          <entry key="py" value="16" />
+          <entry key="py" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="27" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="16" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="12565" />
-          <entry key="txt" value="164" />
+          <entry key="py" value="13129" />
+          <entry key="txt" value="190" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="164" />
-          <entry key="Python" value="12565" />
+          <entry key="PLAIN_TEXT" value="190" />
+          <entry key="Python" value="13129" />
         </counts>
       </usages-collector>
     </session>
@@ -60,45 +61,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="29" column="53" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="29" selection-end-column="53" />
+            <state relative-caret-position="690">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
               <folding>
-                <marker date="1539527772843" expanded="true" signature="156:295" ph="..." />
-                <marker date="1539527772843" expanded="true" signature="323:693" ph="..." />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Robots.py">
+        <entry file="file://$PROJECT_DIR$/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+            <state relative-caret-position="645">
+              <caret line="43" column="12" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="12" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
-                <marker date="1539529630802" expanded="true" signature="35:38" ph="..." />
-                <marker date="1539529630802" expanded="true" signature="74:75" ph="..." />
-                <marker date="1539529630802" expanded="true" signature="445:610" ph="..." />
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1539549546032" expanded="true" signature="907:1005" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Functions.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ImageProcessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="279" column="35" selection-start-line="279" selection-start-column="35" selection-end-line="279" selection-end-column="35" />
+            <state relative-caret-position="633">
+              <caret line="90" column="15" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="15" />
               <folding>
-                <marker date="1539529630807" expanded="true" signature="844:1524" ph="..." />
-                <marker date="1539529630807" expanded="true" signature="2774:2776" ph="..." />
-                <marker date="1539529630807" expanded="true" signature="6772:6829" ph="..." />
-                <marker date="1539529630807" expanded="true" signature="6848:6899" ph="..." />
-                <marker date="1539529630807" expanded="true" signature="6910:6915" ph="..." />
+                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1539549135025" expanded="true" signature="2914:2915" ph="..." />
               </folding>
             </state>
           </provider>
@@ -118,12 +113,15 @@
       <find>drawContours</find>
       <find>position</find>
       <find>BGR</find>
-      <find>print</find>
       <find>putT</find>
       <find>font</find>
       <find>marke</find>
       <find>marker</find>
       <find>markers</find>
+      <find>print</find>
+      <find>firstSetup</find>
+      <find>getMarkers</find>
+      <find>markerPositions</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,13 +134,14 @@
         <option value="$PROJECT_DIR$/Tests/PerpectiveTest.py" />
         <option value="$PROJECT_DIR$/Tests/Color Tests.py" />
         <option value="$PROJECT_DIR$/Tests/ColorTests.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Robots.py" />
+        <option value="$PROJECT_DIR$/ImageProcessing.py" />
         <option value="$PROJECT_DIR$/Functions.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="718" />
     <option name="height" value="900" />
   </component>
@@ -169,7 +168,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,15 +175,11 @@
               <item name="Navigation" type="b2602c69:ProjectViewProjectNode" />
               <item name="Navigation" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Navigation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539521798432</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Marking Robot positioning">
+      <created>1539529653480</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1539529653480</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -390,7 +391,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.12387792" side_tool="true" weight="0.24947146" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8766737" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8766737" weight="0.26385543" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -403,6 +404,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.87612206" visible="true" weight="0.24947146" />
+      <window_info id="Structure" order="1" sideWeight="0.50089765" side_tool="true" weight="0.24947146" />
+      <window_info id="Favorites" order="2" sideWeight="0.12387792" side_tool="true" weight="0.24947146" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8766737" weight="0.26385543" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49964765" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.12332629" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -415,7 +435,8 @@
     <MESSAGE value="Fields detects, but without colors" />
     <MESSAGE value="Fields detects with colors" />
     <MESSAGE value="Added empty robot controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added empty robot controllers" />
+    <MESSAGE value="Marking Robot positioning" />
+    <option name="LAST_COMMIT_MESSAGE" value="Marking Robot positioning" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Screenshotes/Final_screenshot_12.10.2018.png">
@@ -477,40 +498,47 @@
     <entry file="file://$PROJECT_DIR$/images/table2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/Robots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="29" column="53" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="29" selection-end-column="53" />
+        <state relative-caret-position="32">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding>
-            <marker date="1539527772843" expanded="true" signature="156:295" ph="..." />
-            <marker date="1539527772843" expanded="true" signature="323:693" ph="..." />
+            <element signature="e#0#23#0" expanded="true" />
+            <marker date="1539529708159" expanded="true" signature="35:38" ph="..." />
+            <marker date="1539529708159" expanded="true" signature="74:75" ph="..." />
+            <marker date="1539529708159" expanded="true" signature="445:676" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Robots.py">
+    <entry file="file://$PROJECT_DIR$/ImageProcessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        <state relative-caret-position="633">
+          <caret line="90" column="15" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="15" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
-            <marker date="1539529630802" expanded="true" signature="35:38" ph="..." />
-            <marker date="1539529630802" expanded="true" signature="74:75" ph="..." />
-            <marker date="1539529630802" expanded="true" signature="445:610" ph="..." />
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1539549135025" expanded="true" signature="2914:2915" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="279" column="35" selection-start-line="279" selection-start-column="35" selection-end-line="279" selection-end-column="35" />
+        <state relative-caret-position="645">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="12" />
           <folding>
-            <marker date="1539529630807" expanded="true" signature="844:1524" ph="..." />
-            <marker date="1539529630807" expanded="true" signature="2774:2776" ph="..." />
-            <marker date="1539529630807" expanded="true" signature="6772:6829" ph="..." />
-            <marker date="1539529630807" expanded="true" signature="6848:6899" ph="..." />
-            <marker date="1539529630807" expanded="true" signature="6910:6915" ph="..." />
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1539549546032" expanded="true" signature="907:1005" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -23,9 +23,9 @@ class Robot_Main:
         pass
 
     def getPos(self, frame, marker):
-        cv2.circle(frame, (marker['2'][0], marker['2'][1]), 2, (0, 0, 255), -1)
-        print(getRealPos(marker['2'][0], marker['2'][1]))
-        return frame
+        cv2.circle(frame, (marker[str(self.marker)][0], marker[str(self.marker)][1]), 2, (0, 0, 255), -1)
+        self.pos = getRealPos(marker[str(self.marker)][0], marker[str(self.marker)][1])
+        return frame, self.pos
 
     @property
     def __repr__(self):

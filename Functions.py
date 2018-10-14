@@ -1,9 +1,13 @@
 from typing import List, Any
 from webcolors import *
+from ImageProcessing import *
 import cv2
 import cv2.aruco as aruco
 import math
 import numpy as np
+
+camA = cv2.VideoCapture(1)
+camB = cv2.VideoCapture(2)
 
 fieldWidth = 730
 fieldHeight = 345
@@ -17,7 +21,7 @@ red = []
 
 position = []
 
-m = []
+markerPositions = {}
 
 Sfields = {
     "A": {
@@ -37,7 +41,12 @@ def nothing(x):
     pass
 
 
-#
+def getImage():
+    _, frameA = camA.read()
+    _, frameB = camB.read()
+    return mergeImages(frameA, frameB)
+
+
 def getFields(image):
     flds = {}
     poss = {}
@@ -138,18 +147,20 @@ def getRoves(image):
 
 
 def firstSetup(img):
-    global m
-    m = getMarkers(img)["markers"]
+    global markerPositions
+    markerPositions = getMarkers(img)["markers"]
 
 
+perspectM = None
 def removePerspective(second):
-    global m
+    m = markerPositions
+    perspectM = m
     src = np.float32([m[1],
                       m[2],
                       m[3],
                       m[6]])
 
-    w, h = 730, 345
+    w, h = screenWidth, screenHeight
     dst = np.float32([(0, h),
                       (0, 0),
                       (w, 0),
@@ -158,7 +169,7 @@ def removePerspective(second):
     nh, nw = second.shape[:2]
     M = cv2.getPerspectiveTransform(src, dst)
     warped = cv2.warpPerspective(second, M, (nw, nh), flags=cv2.INTER_LINEAR)
-    return warped[:h, :w]
+    return warped[:h, :w], perspectM
 
 
 def getBoundingRotatedRect(cnt):
