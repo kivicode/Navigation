@@ -5,11 +5,11 @@ import cv2.aruco as aruco
 import math
 import numpy as np
 
-fieldWidth = 3000
-fieldHeight = 1000
+fieldWidth = 730
+fieldHeight = 345
 
-screenWidth = 593
-screenHeight = 383
+screenWidth = 730
+screenHeight = 345
 
 green = [[65, 128, 62], 36, 110]
 blue = [[176, 124, 45], 26, 39]
@@ -149,16 +149,16 @@ def removePerspective(second):
                       m[3],
                       m[6]])
 
-    w, h = 600, 200
+    w, h = 730, 345
     dst = np.float32([(0, h),
                       (0, 0),
                       (w, 0),
                       (w, h)])
 
-    h, w = second.shape[:2]
+    nh, nw = second.shape[:2]
     M = cv2.getPerspectiveTransform(src, dst)
-    warped = cv2.warpPerspective(second, M, (w, h), flags=cv2.INTER_LINEAR)
-    return warped[:200, :600]
+    warped = cv2.warpPerspective(second, M, (nw, nh), flags=cv2.INTER_LINEAR)
+    return warped[:h, :w]
 
 
 def getBoundingRotatedRect(cnt):
@@ -200,16 +200,16 @@ def getMarkers(gray):
     dictionary = aruco.Dictionary_get(aruco.DICT_6X6_250)
     corners, ids, rejectedImgPoints = aruco.detectMarkers(gray, dictionary,
                                                           parameters=parameters)
-    centers = []
+    centers = {}
     i = 0
     for corner in corners:
         for cur in corner:
             center = [int((cur[0][0] + cur[2][0]) / 2), int((cur[0][1] + cur[2][1]) / 2)]
-            centers.append(center)
-            cv2.circle(gray, (center[0], center[1]), 2, (0, 0, 255), -1)
+            centers[str(ids[i][0])] = center
+            # cv2.circle(gray, (center[0], center[1]), 2, (0, 0, 255), -1)
             # cv2.rectangle(gray, (cur[0][0], cur[0][1]), (cur[2][0], cur[2][1]), (0, 255, 0), 3)
             font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(gray, str(ids[i][0]), (center[0], center[1]), font, 1, (0, 0, 255), 1, cv2.LINE_AA)
+            # cv2.putText(gray, str(ids[i][0]), (center[0], center[1]), font, 1, (0, 0, 255), 1, cv2.LINE_AA)
             markers[ids[i][0]] = (center[0], center[1])
             # cv2.imshow("G", gray)
             i += 1
@@ -273,3 +273,8 @@ class Rect:
     def isInside(self, a):
         return not (self.leftUp[0] < a.leftUp[0] and self.leftUp[1] < a.leftUp[1] and self.rightDown[0] > a.rightDown[
             0] and self.rightDown[1] > a.rightDown[1])
+
+def dist(a, b):
+    dx = abs(a[0]-b[0])
+    dy = abs(a[1]-b[1])
+    return math.sqrt(dx**2 + dy**2)
