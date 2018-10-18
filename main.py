@@ -15,28 +15,27 @@ def setup():
             cv2.setMouseCallback('Final', onMouse)
             if cv2.waitKey(1) & 0xFF == ord('l'):
                 break
-        except Exception as e:
-            print(e)
+        except Exception as exception:
+            print(exception)
 
 
 def main():
     frame = getImage()
 
-    cv2.imshow('Original', frame)
+    show('Original', frame)
 
     frame, poss = removePerspective(frame)
 
-    cv2.imshow('Final', frame)
+    show('Final', frame)
 
     markers = getMarkers(frame)["centers"]
     frame, robot_pos = main_robot.getPos(frame, markers)
-    cv2.imshow('Final', frame)
+    show('Final', frame)
 
 
 setup()
 while True:
     try:
-
         main()
     except Exception as e:
         print(e)
