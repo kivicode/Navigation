@@ -27,15 +27,14 @@ def getImage():
     _, frameA = camA.read()
     return frameA
 
+
 def show(name, frame):
-    return cv2.imshow(name, imutils.resize(frame, height=320))
-
-
+    return cv2.imshow(name, imutils.resize(frame, height=600))
 
 
 def firstSetup(img):
     global markerPositions
-    markerPositions = getMarkers(img)["markers"]
+    markerPositions = getMarkers(img)
 
 
 def removePerspective(second):
@@ -55,7 +54,13 @@ def removePerspective(second):
     nh, nw = second.shape[:2]
     M = cv2.getPerspectiveTransform(src, dst)
     warped = cv2.warpPerspective(second, M, (nw, nh), flags=cv2.INTER_LINEAR)
-    return warped[:h, :w], perspectM
+    return warped, perspectM
+
+
+def removePerspective2(second):
+    m = markerPositions
+    perspectM = m
+    return None, perspectM
 
 
 def getBoundingRect(cnt, margin=None):
@@ -73,7 +78,6 @@ def getRealPos(x, y):
     return [int(ox), int(oy)]
 
 
-
 def onMouse(event, x, y, a, b):
     global position
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -81,7 +85,7 @@ def onMouse(event, x, y, a, b):
         print("X: " + str(position[0]) + "mm\tY: " + str(position[1]) + "mm")
 
 
-def getMarkers(gray, debug=False):
+def getMarkers(gray, debug=True):
     markers = {}
     parameters = aruco.DetectorParameters_create()
     dictionary = aruco.Dictionary_get(aruco.DICT_6X6_250)
@@ -94,11 +98,10 @@ def getMarkers(gray, debug=False):
             center = [int((cur[0][0] + cur[2][0]) / 2), int((cur[0][1] + cur[2][1]) / 2)]
             centers[str(ids[i][0])] = center
             # cv2.circle(gray, (center[0], center[1]), 2, (0, 0, 255), -1)
-            cv2.rectangle(gray, (cur[0][0], cur[0][1]), (cur[2][0], cur[2][1]), (0, 255, 0), 3)
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(gray, str(ids[i][0]), (center[0], center[1]), font, 1, (0, 0, 255), 1, cv2.LINE_AA)
+            # font = cv2.FONT_HERSHEY_SIMPLEX
+            # cv2.putText(gray, str(ids[i][0]), (center[0], center[1]), font, 1, (0, 255, 0), 3)
             markers[ids[i][0]] = (center[0], center[1])
             if debug:
                 cv2.imshow("G", gray)
             i += 1
-    return {"frame": gray, "centers": centers, "markers": markers}
+    return markers

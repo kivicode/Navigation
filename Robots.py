@@ -23,9 +23,17 @@ class Robot_Main:
         pass
 
     def getPos(self, frame, marker):
-        cv2.circle(frame, (marker[str(self.marker)][0], marker[str(self.marker)][1]), 2, (0, 0, 255), -1)
-        self.pos = getRealPos(marker[str(self.marker)][0], marker[str(self.marker)][1])
+        cv2.circle(frame, (marker[self.marker][0], marker[self.marker][1]), 5, (0, 0, 255), -1)
+        self.pos = getRealPos(marker[self.marker][0], marker[self.marker][1])
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(frame, str(self.pos[0]) + ", " + str(self.pos[1]),
+                    (marker[self.marker][0], marker[self.marker][1]),
+                    font,
+                    1,
+                    (0, 255, 0),
+                    2)
         return frame, self.pos
+
 
     @property
     def __repr__(self):
