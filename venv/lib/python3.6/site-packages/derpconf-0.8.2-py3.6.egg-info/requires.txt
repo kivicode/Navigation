@@ -1,0 +1,9 @@
+six
+
+[tests]
+gevent
+pyVows
+coverage
+colorama
+tox
+six

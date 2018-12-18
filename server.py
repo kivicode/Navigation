@@ -2,8 +2,7 @@ import urllib.request as urllib
 
 
 def makeLink(mode, a='0', b='0'):
-    out = 'http://192.168.5.1/web/script.php?mode=' + str(mode) + '&r1=' + str(a).replace(" ", "") + '&r2=' + str(
-        b).replace(' ', '')
+    out = 'http://192.168.5.1/web/script.php?mode=' + str(mode) + '&r1=' + str(a).replace(" ", "") + '&r2=' + str(b).replace(' ', '')
     return out
 
 

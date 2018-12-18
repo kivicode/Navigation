@@ -1,0 +1,14 @@
+colour
+thumbor
+
+[tests]
+mock
+nose
+coverage
+yanc
+colorama
+preggy
+ipdb
+coveralls
+numpy
+colour

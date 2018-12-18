@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038ad4db-9766-4ade-9e8d-5b1383c4e521" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kinect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Robots.py" beforeDir="false" afterPath="$PROJECT_DIR$/Robots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/libs.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/table2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/table2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,53 +21,57 @@
     <session id="2098835789">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.closed" value="16" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="7" />
           <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitattributes" value="2" />
           <entry key="html" value="3" />
-          <entry key="jpg" value="3" />
+          <entry key="jpg" value="5" />
+          <entry key="json" value="1" />
           <entry key="php" value="2" />
-          <entry key="png" value="37" />
-          <entry key="py" value="32" />
+          <entry key="png" value="41" />
+          <entry key="py" value="38" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="3" />
-          <entry key="Image" value="40" />
+          <entry key="Image" value="46" />
+          <entry key="JSON" value="1" />
           <entry key="PHP" value="2" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="32" />
+          <entry key="Python" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Python Console" value="26" />
           <entry key="dummy" value="8" />
           <entry key="html" value="109" />
           <entry key="php" value="594" />
-          <entry key="py" value="16402" />
-          <entry key="txt" value="278" />
+          <entry key="py" value="19545" />
+          <entry key="txt" value="295" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="109" />
           <entry key="PHP" value="594" />
-          <entry key="PLAIN_TEXT" value="286" />
-          <entry key="Python" value="16402" />
+          <entry key="PLAIN_TEXT" value="303" />
+          <entry key="Python" value="19571" />
         </counts>
       </usages-collector>
     </session>
@@ -76,32 +81,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server.py">
+        <entry file="file://$PROJECT_DIR$/kinect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Robots.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+            <state relative-caret-position="463">
+              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <marker date="1545160275598" expanded="true" signature="1076:1167" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,13 +97,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-476">
-              <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+            <state relative-caret-position="192">
+              <caret line="50" column="21" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="21" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1540723015964" expanded="true" signature="373:540" ph="..." />
-                <marker date="1540723015964" expanded="true" signature="457:540" ph="..." />
-                <marker date="1540723015964" expanded="true" signature="1763:1892" ph="..." />
+                <marker date="1545160187403" expanded="true" signature="389:603" ph="..." />
+                <marker date="1545160187403" expanded="true" signature="520:603" ph="..." />
+                <marker date="1545160187403" expanded="true" signature="1825:1952" ph="..." />
+                <marker date="1545160187403" expanded="true" signature="1859:1952" ph="..." />
+                <marker date="1545160187403" expanded="true" signature="3484:3485" ph="..." />
+                <marker date="1545160187403" expanded="true" signature="3485:3489" ph="..." />
               </folding>
             </state>
           </provider>
@@ -126,8 +117,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -144,10 +135,11 @@
       <find>print</find>
       <find>firstSetup</find>
       <find>getMarkers</find>
-      <find>markerPositions</find>
       <find>per</find>
       <find>text</find>
       <find>try</find>
+      <find>markerPositions</find>
+      <find>make_lines</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,15 +160,17 @@
         <option value="$PROJECT_DIR$/web/script.php" />
         <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/Robots.py" />
-        <option value="$PROJECT_DIR$/Functions.py" />
-        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/client.py" />
         <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/Functions.py" />
+        <option value="$PROJECT_DIR$/kinect.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="726" />
-    <option name="width" value="714" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="x" value="193" />
+    <option name="width" value="1247" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -190,7 +184,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>PyBroadExceptionInspection</id>
+            <id>PyPep8Inspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -202,6 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,32 +209,27 @@
               <item name="Navigation" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Navigation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$/Tests" />
-      <recent name="$PROJECT_DIR$/Screenshotes" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/images/tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Tests" />
+      <recent name="$PROJECT_DIR$/Screenshotes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -254,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.kinect">
     <configuration name="Color Tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Navigation" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -297,7 +287,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="PerpectiveTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="kinect" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Navigation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,7 +299,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/PerpectiveTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kinect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -362,18 +352,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.PerpectiveTest" />
       <item itemvalue="Python.Color Tests" />
       <item itemvalue="Python.ImageProcessing" />
       <item itemvalue="Python.server" />
+      <item itemvalue="Python.kinect" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.kinect" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.ImageProcessing" />
         <item itemvalue="Python.Color Tests" />
-        <item itemvalue="Python.PerpectiveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -486,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540130456784</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update signature">
+      <created>1540723597777</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1540723597777</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -507,6 +504,25 @@
       <window_info id="Favorites" order="2" sideWeight="0.12530121" side_tool="true" weight="0.121916845" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8766737" visible="true" weight="0.26385543" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8012685" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.1987315" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8746988" visible="true" weight="0.121916845" />
+      <window_info id="Structure" order="1" sideWeight="0.12530121" side_tool="true" weight="0.121916845" />
+      <window_info id="Favorites" order="2" sideWeight="0.12530121" side_tool="true" weight="0.121916845" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8766737" visible="true" weight="0.26385543" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -519,7 +535,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
@@ -538,7 +554,8 @@
     <MESSAGE value="Marking Robot positioning" />
     <MESSAGE value="Added cam compound" />
     <MESSAGE value="Total positioning update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Total positioning update" />
+    <MESSAGE value="Update signature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update signature" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Screenshotes/Final_screenshot_12.10.2018.png">
@@ -590,13 +607,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pyimagesearch/__init__.py" />
     <entry file="file://$PROJECT_DIR$/pyimagesearch/panorama.py" />
-    <entry file="file://$PROJECT_DIR$/libs/libs.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/libs.txt" />
     <entry file="file://$PROJECT_DIR$/images/tests/sedona_left_01.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -629,12 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/marker.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/table.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/markers.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -651,40 +656,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/images/marker.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/table.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/pip-selfcheck.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/test_img.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/Final_screenshot_10.12.2018.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/Копия test_img.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Robots.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="23" column="4" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1540723015964" expanded="true" signature="373:540" ph="..." />
-            <marker date="1540723015964" expanded="true" signature="457:540" ph="..." />
-            <marker date="1540723015964" expanded="true" signature="1763:1892" ph="..." />
-          </folding>
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/home_tests_for.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1545160187403" expanded="true" signature="389:603" ph="..." />
+            <marker date="1545160187403" expanded="true" signature="520:603" ph="..." />
+            <marker date="1545160187403" expanded="true" signature="1825:1952" ph="..." />
+            <marker date="1545160187403" expanded="true" signature="1859:1952" ph="..." />
+            <marker date="1545160187403" expanded="true" signature="3484:3485" ph="..." />
+            <marker date="1545160187403" expanded="true" signature="3485:3489" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kinect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1545160275598" expanded="true" signature="1076:1167" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

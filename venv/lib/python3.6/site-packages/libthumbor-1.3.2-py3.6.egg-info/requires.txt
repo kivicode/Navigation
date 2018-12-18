@@ -1,0 +1,9 @@
+six
+
+[tests]
+mock
+nose
+coverage
+yanc
+preggy
+flake8
