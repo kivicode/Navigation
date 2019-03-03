@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="038ad4db-9766-4ade-9e8d-5b1383c4e521" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kinect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chess.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/table2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/table2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/FIELD.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/FIELD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Final_screenshot_10.12.2018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/home_tests_for.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/table.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/table2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/table3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/table4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/test_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/test_img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Без названия.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Копия test_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kinect.py" beforeDir="false" afterPath="$PROJECT_DIR$/kinect.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,39 +31,42 @@
     <session id="2098835789">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="16" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.10" value="2" />
-          <entry key="project.open.time.11" value="7" />
-          <entry key="project.open.time.12" value="2" />
-          <entry key="project.open.time.13" value="4" />
+          <entry key="project.closed" value="26" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.11" value="11" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.13" value="5" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="2" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitattributes" value="2" />
           <entry key="html" value="3" />
-          <entry key="jpg" value="5" />
+          <entry key="jpg" value="10" />
           <entry key="json" value="1" />
           <entry key="php" value="2" />
-          <entry key="png" value="41" />
-          <entry key="py" value="38" />
+          <entry key="png" value="62" />
+          <entry key="py" value="47" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="3" />
-          <entry key="Image" value="46" />
+          <entry key="Image" value="72" />
           <entry key="JSON" value="1" />
           <entry key="PHP" value="2" />
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="38" />
+          <entry key="Python" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -62,7 +75,7 @@
           <entry key="dummy" value="8" />
           <entry key="html" value="109" />
           <entry key="php" value="594" />
-          <entry key="py" value="19545" />
+          <entry key="py" value="25984" />
           <entry key="txt" value="295" />
         </counts>
       </usages-collector>
@@ -71,7 +84,7 @@
           <entry key="HTML" value="109" />
           <entry key="PHP" value="594" />
           <entry key="PLAIN_TEXT" value="303" />
-          <entry key="Python" value="19571" />
+          <entry key="Python" value="26010" />
         </counts>
       </usages-collector>
     </session>
@@ -82,14 +95,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kinect.py">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <marker date="1545160275598" expanded="true" signature="1076:1167" ph="..." />
-              </folding>
+            <state relative-caret-position="99">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -97,16 +106,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="50" column="21" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="21" />
+            <state relative-caret-position="116">
+              <caret line="155" column="7" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1545160187403" expanded="true" signature="389:603" ph="..." />
-                <marker date="1545160187403" expanded="true" signature="520:603" ph="..." />
-                <marker date="1545160187403" expanded="true" signature="1825:1952" ph="..." />
-                <marker date="1545160187403" expanded="true" signature="1859:1952" ph="..." />
-                <marker date="1545160187403" expanded="true" signature="3484:3485" ph="..." />
-                <marker date="1545160187403" expanded="true" signature="3485:3489" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="401:613" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="530:613" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="1549:1676" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="1583:1676" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="2759:2831" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="3785:3786" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="3786:3790" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="3909:4028" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="4438:4439" ph="..." />
+                <marker date="1551617906505" expanded="true" signature="5165:5170" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1551611260124" expanded="true" signature="160:221" ph="..." />
               </folding>
             </state>
           </provider>
@@ -140,10 +166,29 @@
       <find>try</find>
       <find>markerPositions</find>
       <find>make_lines</find>
+      <find>field_mask_pts</find>
+      <find>get</find>
+      <find>Track</find>
     </findStrings>
+    <replaceStrings>
+      <replace>field_mask_pts_orange</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -162,15 +207,16 @@
         <option value="$PROJECT_DIR$/Robots.py" />
         <option value="$PROJECT_DIR$/client.py" />
         <option value="$PROJECT_DIR$/server.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Functions.py" />
         <option value="$PROJECT_DIR$/kinect.py" />
+        <option value="$PROJECT_DIR$/tests.py" />
+        <option value="$PROJECT_DIR$/chess.py" />
+        <option value="$PROJECT_DIR$/Functions.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="193" />
-    <option name="width" value="1247" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -204,11 +250,6 @@
               <item name="Navigation" type="b2602c69:ProjectViewProjectNode" />
               <item name="Navigation" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Navigation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Navigation" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -221,15 +262,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/Tests" />
+      <recent name="$PROJECT_DIR$/Screenshotes" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/images/tests" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Tests" />
-      <recent name="$PROJECT_DIR$/Screenshotes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -244,29 +285,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.kinect">
-    <configuration name="Color Tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Navigation" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/ColorTests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ImageProcessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="chess" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Navigation" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -278,7 +298,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ImageProcessing.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -350,20 +370,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Navigation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.Color Tests" />
-      <item itemvalue="Python.ImageProcessing" />
       <item itemvalue="Python.server" />
       <item itemvalue="Python.kinect" />
+      <item itemvalue="Python.tests" />
+      <item itemvalue="Python.chess" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.kinect" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.chess" />
+        <item itemvalue="Python.tests" />
+        <item itemvalue="Python.kinect" />
         <item itemvalue="Python.server" />
-        <item itemvalue="Python.ImageProcessing" />
-        <item itemvalue="Python.Color Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -496,15 +537,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8746988" visible="true" weight="0.121916845" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8746988" visible="true" weight="0.121916845" />
       <window_info id="Structure" order="1" sideWeight="0.12530121" side_tool="true" weight="0.121916845" />
       <window_info id="Favorites" order="2" sideWeight="0.12530121" side_tool="true" weight="0.121916845" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8766737" visible="true" weight="0.26385543" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8766737" visible="true" weight="0.26385543" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4989429" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -531,7 +572,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.8012685" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.1987315" side_tool="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -558,12 +599,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update signature" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Screenshotes/Final_screenshot_12.10.2018.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Screenshotes/Final_screenshot_11.10.2018.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/PerpectiveTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -585,9 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/table4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharmCE2018.2/python_stubs/255150372/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -596,9 +628,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.jpg" />
-    <entry file="file://$PROJECT_DIR$/images/tests/bryce_left_02.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/tests/bryce_left_01.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -608,9 +637,6 @@
     <entry file="file://$PROJECT_DIR$/pyimagesearch/__init__.py" />
     <entry file="file://$PROJECT_DIR$/pyimagesearch/panorama.py" />
     <entry file="file://$PROJECT_DIR$/libs/libs.txt" />
-    <entry file="file://$PROJECT_DIR$/images/tests/sedona_left_01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/tests/sedona_right_01.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -640,15 +666,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/markers.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/table2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/table3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/table2.png" />
+    <entry file="file://$PROJECT_DIR$/images/table3.png" />
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -656,12 +675,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/marker.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/table.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/table.png" />
     <entry file="file://$PROJECT_DIR$/venv/pip-selfcheck.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -669,15 +683,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/test_img.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/Final_screenshot_10.12.2018.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/Копия test_img.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/test_img.jpg" />
     <entry file="file://$PROJECT_DIR$/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -699,43 +705,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/home_tests_for.png">
+    <entry file="file://$PROJECT_DIR$/images/Без названия.png" />
+    <entry file="file://$PROJECT_DIR$/images/Копия test_img.jpg" />
+    <entry file="file://$PROJECT_DIR$/images/table4.png" />
+    <entry file="file://$PROJECT_DIR$/images/FIELD.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1545160187403" expanded="true" signature="389:603" ph="..." />
-            <marker date="1545160187403" expanded="true" signature="520:603" ph="..." />
-            <marker date="1545160187403" expanded="true" signature="1825:1952" ph="..." />
-            <marker date="1545160187403" expanded="true" signature="1859:1952" ph="..." />
-            <marker date="1545160187403" expanded="true" signature="3484:3485" ph="..." />
-            <marker date="1545160187403" expanded="true" signature="3485:3489" ph="..." />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/images/tests/bryce_left_02.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/tests/sedona_left_01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/home_tests_for.png" />
+    <entry file="file://$PROJECT_DIR$/image.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screenshotes/Final_screenshot_12.10.2018.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/Final_screenshot_10.12.2018.png" />
+    <entry file="file://$PROJECT_DIR$/Screenshotes/Final_screenshot_11.10.2018.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/test_img.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/markers.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/marker.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/img.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/home_test_for_color.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/kinect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+        <state relative-caret-position="429">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <marker date="1545160275598" expanded="true" signature="1076:1167" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1551611260124" expanded="true" signature="160:221" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="155" column="7" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1551617906505" expanded="true" signature="401:613" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="530:613" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="1549:1676" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="1583:1676" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="2759:2831" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="3785:3786" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="3786:3790" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="3909:4028" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="4438:4439" ph="..." />
+            <marker date="1551617906505" expanded="true" signature="5165:5170" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="30" />
         </state>
       </provider>
     </entry>

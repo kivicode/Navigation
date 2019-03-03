@@ -1,10 +1,20 @@
-from Functions import removePerspective
+from Functions import removePerspective, correctPositions, getMarkers, getImage
 import cv2
 import numpy as np
-import freenect
 
-field_mask_pts = np.array([[0, 296], [277, 131], [637, 216], [640, 480]])
-help_mask_pts = np.array([[234, 320], [223, 197], [526, 220], [526, 391]])
+# import freenect
+
+ORANGE = 0
+GREEN = 1
+
+side = GREEN
+
+field_mask_pts_orange = np.array([[0, 296], [277, 131], [637, 216], [640, 480]])
+field_mask_pts_green = np.array([[0, 480], [0, 220], [318, 148], [640, 343], [640, 480]])
+field_mask_pts = [field_mask_pts_orange, field_mask_pts_green]
+help_mask_pts_orange = np.array([[234, 320], [223, 197], [526, 220], [526, 391]])
+help_mask_pts_green = np.array([[174, 285], [169, 114], [433, 124], [457, 254]])
+help_mask_pts = [help_mask_pts_orange, help_mask_pts_green]
 
 screen_lines = []
 
@@ -32,75 +42,78 @@ def line_intersection(a, b):
     return [int(x), int(y)]
 
 
-def draw_hint(frame):
-    cv2.polylines(frame, [(field_mask_pts).reshape((-1, 1, 2))], True, (255, 0, 255), 2)
+def draw_hint(image):
+    cv2.polylines(image, [field_mask_pts[side].reshape((-1, 1, 2))], True, (255, 0, 255), 2)
 
 
 def make_lines(img, canny):
     global screen_lines
-    lines = cv2.HoughLinesP(canny, 1, np.pi / 180, 50, maxLineGap=50)
+    lines = cv2.HoughLinesP(canny, 1, np.pi / 180, 50, maxLineGap=50, minLineLength=10)
     if lines is not None:
         for line in lines:
             x1, y1, x2, y2 = line[0]
-            if x1 in range(273, 480) and x2 in range(273, 480) and np.sqrt(((x1 - x2) ** 2) + ((y1 - y2) ** 2)) > 50:
-                li_a = line_intersection([[x1, y1], [x2, y2]],
-                                         [field_mask_pts.copy().tolist()[1], field_mask_pts.copy().tolist()[2]])
-                li_b = line_intersection([[x1, y1], [x2, y2]],
-                                         [field_mask_pts.copy().tolist()[0], field_mask_pts.copy().tolist()[3]])
-                cv2.line(img, tuple(li_a), tuple(li_b), (0, 255, 0), 5)
-                print(li_a, li_b)
-                screen_lines.append([li_b, li_a])
-                break
+            y1 += 20
+            li_a = line_intersection([[x1, y1], [x2, y2]],
+                                     [field_mask_pts[side].copy().tolist()[1],
+                                      field_mask_pts[side].copy().tolist()[2]])
+            li_b = line_intersection([[x1, y1], [x2, y2]],
+                                     [field_mask_pts[side].copy().tolist()[0],
+                                      field_mask_pts[side].copy().tolist()[3]])
+            cv2.line(img, tuple(li_a), tuple(li_b), (0, 255, 0), 5)
+            print(li_a, li_b)
+            screen_lines.append([li_b, li_a])
+            break
 
 
-def get_video():
-    array, _ = freenect.sync_get_video()
-    array = cv2.cvtColor(array, cv2.COLOR_RGB2BGR)
-    return array
+# c
+# def get_video():
+# array, _ = freenect.sync_get_video()
+# array = cv2.cvtColor(array, cv2.COLOR_RGB2BGR)
+# return array
 
+
+# points = [-1, -1, -1, -1]
+points = [[647, 249],
+          [975, 220],
+          [1102, 324],
+          [732, 367]]
+index = 0
+finished = False
+
+
+def clicked(event, x, y, flags, param):
+    global index, finished, prev_pts
+    if event == cv2.EVENT_LBUTTONDBLCLK and not finished:
+        points[index] = [x, y]
+        print(x, y)
+        index += 1
+        if not -1 in points:
+            finished = True
+    else:
+        finished = False
+
+
+cv2.namedWindow('newFrame')
+cv2.setMouseCallback("newFrame", clicked)
+marker = []
+prev_pts = [[100, 100]]
 
 while True:
     # depth, timestamp = freenect.sync_get_depth()
-    # frame = get_video()
+    frame = getImage()
 
-    # depth = depth.astype(np.uint8)
-    depth = cv2.imread('images/home_tests_for.png')
-    depth = cv2.cvtColor(depth, cv2.COLOR_BGR2GRAY)
+    if True:
+        try:
+            marker = getMarkers(frame)[5][2].tolist()[0][:1][0]
+            if marker not in prev_pts:
+                prev_pts.append(marker)
+            if None not in prev_pts:
+                cv2.polylines(frame, [np.array([prev_pts], np.int32).reshape((-1, 1, 2))], False, (255, 0, 255), 3)
+        except Exception as e:
+            prev_pts = []
+            print("Marker not found", e)
 
-    field_mask = np.zeros_like(depth)
-    cv2.fillConvexPoly(field_mask, field_mask_pts, (255, 255, 255))
-
-    help_mask = np.zeros_like(depth)
-    cv2.fillConvexPoly(help_mask, help_mask_pts, (255, 255, 255))
-
-    depth = cv2.bitwise_not(depth, mask=field_mask)
-    stick = cv2.bitwise_not(depth, mask=help_mask)
-
-    depth = cv2.cvtColor(depth, cv2.COLOR_GRAY2BGR)
-
-    stick_canny = cv2.Canny(stick, 10, 20)
-    try:
-        make_lines(depth, stick_canny)
-        print("Succ")
-    except Exception as e:
-        print(e)
-
-    # calibration_pts.append()
-    pts = field_mask_pts.tolist()
-    screen_lines.append([pts[0], pts[1]])
-    screen_lines.append([pts[1], screen_lines[0][1]])
-    screen_lines.append([pts[0], screen_lines[0][0]])
-    for i in screen_lines:
-        # try:
-        cv2.line(depth, tuple(i[0]), tuple(i[1]), (0, 0, 255), 2)
-        # except:
-        #     pass
-
-    draw_hint(depth)
-    depth = removePerspective(depth, [pts[0], pts[1], screen_lines[0][1], screen_lines[0][0]])
-    cv2.imshow('BW', depth)
-    cv2.imshow('Stick', stick_canny)
-    # cv2.imshow('Field', frame)
+    cv2.imshow('main', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
